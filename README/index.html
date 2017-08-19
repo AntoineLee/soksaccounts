@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Home - Sock</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "README.md";
+    var mkdocs_page_url = "/README/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="./" class="icon icon-home"> Sock</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#shadowsocks">Shadowsocks 账号爬虫</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#_1">运行环境</a></li>
+        
+            <li><a class="toctree-l3" href="#_2">爬虫介绍</a></li>
+        
+            <li><a class="toctree-l3" href="#_3">安装</a></li>
+        
+            <li><a class="toctree-l3" href="#_4">使用</a></li>
+        
+            <li><a class="toctree-l3" href="#_5">效果</a></li>
+        
+            <li><a class="toctree-l3" href="#_6">最后</a></li>
+        
+            <li><a class="toctree-l3" href="#fork-star">欢迎 Fork 和 Star</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="./">Sock</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="./">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="shadowsocks">Shadowsocks 账号爬虫</h1>
+<h3 id="_1">运行环境</h3>
+<ul>
+<li>Windows 10</li>
+<li>python 3.5.2  </li>
+<li><a href="https://github.com/shadowsocks/shadowsocks-windows/releases">shadowsocks 4.0.2</a></li>
+</ul>
+<h3 id="_2">爬虫介绍</h3>
+<p>众所周知，免费的 shadowsocks 账号基本上是会不定时更换密码的，为了免去手动操作的过程，这个爬虫爬取了几个提供免费 shadowsocks 账号的网站，并自动生成配置文件，只需设置自己的 shadowsocks 安装目录便行  </p>
+<p>由于爬取的账号速度未知，所以采用<strong>高可用</strong>策略</p>
+<h3 id="_3">安装</h3>
+<ol>
+<li>git clone https://github.com/chenjiandongx/soksaccounts.git  </li>
+<li>将 main( ) 里面 path 配置成自己的 shadowsocks 的路径  </li>
+<li>cd soksaccounts   </li>
+<li><code>pip install -r requirements.txt</code></li>
+<li><code>python setup.py install</code></li>
+</ol>
+<h3 id="_4">使用</h3>
+<ol>
+<li>运行soks</li>
+</ol>
+<pre><code>C:\Users\54186&gt;soks 
+&gt;&gt;  Generate gui-config.json successful
+</code></pre>
+
+<ol>
+<li>启动 shadowsocks ( 每次启动 soks 均要重启一次 shadowsocks，我也不知为什么它不会自动刷新数据 )</li>
+</ol>
+<h3 id="_5">效果</h3>
+<p>毕竟是免费的，速度肯定没有那么稳定，不过有时 youtube 还是可以达到 720P 的  </p>
+<p><img alt="youtube测速" src="https://github.com/chenjiandongx/soksaccounts/blob/master/images/youtube_0.png" />  </p>
+<p>平时上上 Google 查查东西还是可以的，大部分时间上用 youtube 还是有点卡的，这个就当做<strong>实验性项目</strong>吧</p>
+<h3 id="_6">最后</h3>
+<p>要想要科学上网上得舒心的话，免费的建议 <strong>xx-net</strong>，优化后速度其实还是很不错的。不然就得掏钱自己搭服务器，或者购买 vpn 还是 shadowsocks 服务了  </p>
+<p>xx-net 有图有真相  </p>
+<p><img alt="" src="https://github.com/chenjiandongx/soksaccounts/blob/master/images/youtube_1.png" /></p>
+<h3 id="fork-star">欢迎 Fork 和 Star</h3>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>
