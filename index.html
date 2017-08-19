@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Home - Sock</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> Sock</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#pyecharts">pyecharts</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l3" href="#instatllation">Instatllation</a></li>
+        
+            <li><a class="toctree-l3" href="#basic-usage">Basic Usage</a></li>
+        
+            <li><a class="toctree-l3" href="#working-with-pandas-numpy">Working with pandas &amp; numpy</a></li>
+        
+            <li><a class="toctree-l3" href="#working-with-flask-django">working with Flask &amp; Django</a></li>
+        
+            <li><a class="toctree-l3" href="#documentation">Documentation</a></li>
+        
+            <li><a class="toctree-l3" href="#author">Author</a></li>
+        
+            <li><a class="toctree-l3" href="#license">License</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">Sock</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="pyecharts">pyecharts</h1>
+<p>pyecharts is a library to generate charts using Echarts. It simply provides the interface between Echarts and Python.</p>
+<p><a href="https://travis-ci.org/chenjiandongx/pyecharts"><img alt="Build Status" src="https://travis-ci.org/chenjiandongx/pyecharts.svg?branch=master" /></a>  </p>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://github.com/ecomfe/echarts">Echarts</a> is an open source library from Baidu for data visualization in javascript. It has awesome demo pages so I started to look out for an interface library so that I could use it in Python. I ended up with <a href="https://github.com/yufeiminds/echarts-python">echarts-python</a> on github but it lacks of documentation and was not updated for a while. Just like many other Python projects, I started my own project, pyecharts, referencing echarts-python and another library <a href="https://github.com/Kozea/pygal">pygal</a>.</p>
+<h2 id="instatllation">Instatllation</h2>
+<p>pyecharts works on Python2 and Python3. The latest release is 0.1.9.4. For more information please refer to <a href="https://github.com/chenjiandongx/pyecharts/blob/master/changelog.md">changelog.md</a>  </p>
+<p>You can install it via pip</p>
+<pre><code>$ pip install pyecharts
+</code></pre>
+
+<p>or clone it and install it</p>
+<pre><code>$ git clone https://github.com/chenjiandongx/pyecharts.git
+$ cd pyecharts
+$ python setup.py install
+</code></pre>
+
+<h2 id="basic-usage">Basic Usage</h2>
+<pre><code class="python">from pyecharts import Bar
+
+attr = [&quot;Jan&quot;, &quot;Feb&quot;, &quot;Mar&quot;, &quot;Apr&quot;, &quot;May&quot;, &quot;Jun&quot;, &quot;Jul&quot;, &quot;Aug&quot;, &quot;Sep&quot;, &quot;Oct&quot;, &quot;Nov&quot;, &quot;Dec&quot;]
+v1 = [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+v2 = [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+bar = Bar(&quot;Bar chart&quot;, &quot;precipitation and evaporation one year&quot;)
+bar.add(&quot;precipitation&quot;, attr, v1, mark_line=[&quot;average&quot;], mark_point=[&quot;max&quot;, &quot;min&quot;])
+bar.add(&quot;evaporation&quot;, attr, v2, mark_line=[&quot;average&quot;], mark_point=[&quot;max&quot;, &quot;min&quot;])
+bar.render()
+</code></pre>
+
+<p>It will creat a file named render.html in the root directory, open file with your borwser.  </p>
+<p><img alt="usage-0" src="https://github.com/chenjiandongx/pyecharts/blob/master/images/usage-0.gif" /></p>
+<h2 id="working-with-pandas-numpy">Working with pandas &amp; numpy</h2>
+<pre><code class="python">import pandas as pd
+import numpy as np
+
+from pyecharts import Bar
+
+index = pd.date_range('3/8/2017', periods=6, freq='M')
+df1 = pd.DataFrame(np.random.randn(6), index=index)
+df2 = pd.DataFrame(np.random.randn(6), index=index)
+
+dtvalue1 = [i[0] for i in df1.values]
+dtvalue2 = [i[0] for i in df2.values]
+
+bar = Bar('Bar chart', 'Profit and loss situation')
+bar.add('profit', df1.index, dtvalue1)
+bar.add('loss', df2.index,  dtvalue2)
+bar.render()
+</code></pre>
+
+<p><img alt="usage-1" src="https://github.com/chenjiandongx/pyecharts/blob/master/images/usage-1.png" /></p>
+<h2 id="working-with-flask-django">working with Flask &amp; Django</h2>
+<p>Flask</p>
+<p><img alt="flask-0" src="https://github.com/chenjiandongx/pyecharts/blob/master/images/flask-0.gif" /></p>
+<p>Django</p>
+<p><img alt="django-0" src="https://github.com/chenjiandongx/pyecharts/blob/master/images/django-0.gif" /></p>
+<ul>
+<li>中文文档<ul>
+<li><a href="https://github.com/chenjiandongx/pyecharts/blob/master/document/zh-cn/doc_flask.md">pyecharts + Flask</a></li>
+<li><a href="https://github.com/chenjiandongx/pyecharts/blob/master/document/zh-cn/doc_django.md">pyecharts + Django</a></li>
+</ul>
+</li>
+<li>English<ul>
+<li><a href="https://github.com/chenjiandongx/pyecharts/blob/master/document/en-us/doc_flask.md">pyecharts + Flask</a></li>
+<li><a href="https://github.com/chenjiandongx/pyecharts/blob/master/document/en-us/doc_django.md">pyecharts + Django</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li><a href="https://github.com/chenjiandongx/pyecharts/blob/master/document/zh-cn/documentation.md">中文文档</a></li>
+<li><a href="https://github.com/chenjiandongx/pyecharts/blob/master/document/en-us/documentation.md">English</a></li>
+</ul>
+<h2 id="author">Author</h2>
+<p>pyecharts is developed and maintained by chenjiandongx (<a href="./chenjiandongx@qq.com">chenjiandongx@qq.com</a>)</p>
+<h2 id="license">License</h2>
+<p>pyecharts is released under the MIT License. See LICENSE for more information.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2017-08-19 09:32:18
+-->
